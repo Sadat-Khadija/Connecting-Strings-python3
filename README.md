@@ -52,3 +52,40 @@ print(first, second, third, sep=" ")
 Or remove all spaces:
 
 print(first, second, third, sep="")
+
+
+
+Fixing TypeError (Data Type Mismatch)
+❗ What is the problem?
+
+A TypeError happens when Python tries to combine data types that don’t work together.
+
+In this case, the code tries to add a string and an integer, which Python cannot do.
+
+❌ Example (causes TypeError)
+# The following code causes a type error between a string 
+# and an integer:
+
+print("5 * 1 = " + 5*1)
+
+
+Python sees:
+
+"5 * 1 = " → string
+
+5*1 → integer (5)
+
+And this combination is not allowed.
+
+✅ How to Fix It: Use Explicit Conversion
+
+To fix the error, we must convert the integer to a string using str().
+
+✔ Corrected Code:
+print("5 * 1 = " + str(5*1))
+
+🧠 Why This Works
+
+The str() function changes the result of 5 * 1 (which is 5) into a string, so Python can safely join:
+
+"5 * 1 = "  +  "5"
